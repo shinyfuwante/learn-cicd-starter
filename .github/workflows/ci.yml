@@ -25,6 +25,6 @@ jobs:
     name: fmt
     runs-on: ubuntu-latest
 
-    step:
+    steps:
       - name: check fmt
         run: test -z $(go fmt ./...)
