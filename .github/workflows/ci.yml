@@ -20,6 +20,11 @@ jobs:
 
       - name: Tests
         run: go test ./... -cover
+      - name: install gosec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+      - name: gosec
+        run: gosec ./...
+
 
   style: 
     name: fmt
